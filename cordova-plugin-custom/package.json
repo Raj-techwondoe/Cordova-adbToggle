@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-custom",
+  "version": "0.1.1",
+  "description": "Cordova Plugin for enabling and disabling toggles",
+  "cordova": {
+    "id": "cordova-plugin-custom",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "detection",
+    "detector",
+    "root",
+    "rooted",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ]
+}

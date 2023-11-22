@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-custom" version="0.1.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Cordova pllugin custom</name>
+    <description>Cordova Plugin for detecting if the device running the app is rooted.</description>
+    <keywords>cordova, detection, detector, root, rooted</keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version="&gt;=3.0.0"/>
+    </engines>
+    <js-module name="Custom" src="www/custom.js">
+        <clobbers target="custom"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="Custom">
+                <param name="android-package" value="ru.raju.root.Custom"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/Custom.java" target-dir="src/ru/raju/root"/>
+    </platform>
+</plugin>
