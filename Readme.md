@@ -51,3 +51,4 @@ https://github.com/Raj-techwondoe/Cordova-adbToggle/assets/110778411/fe9d3e7c-26
 
 
 
+Sample APK : [APK](./sample.apk)
