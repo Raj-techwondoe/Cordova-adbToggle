@@ -42,4 +42,12 @@ You can view the debug changes on chrome inspector on
 
 ```
 chrome://inspect/#devices
+
 ```
+
+Sample working:
+
+https://github.com/Raj-techwondoe/Cordova-adbToggle/assets/110778411/fe9d3e7c-2697-44c5-b9a7-3bb947572996
+
+
+
