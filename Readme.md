@@ -52,3 +52,11 @@ https://github.com/Raj-techwondoe/Cordova-adbToggle/assets/110778411/fe9d3e7c-26
 
 
 Sample APK : [APK](./sample.apk)
+
+
+## Code
+
+- JS function on `home.page.ts`
+- HTML on `home.page.html`
+- Custom plugin created which runs shell script to get ADB status, enable and disable ADB bridge 
+- Android specific code at `Custom.java` and binding it to JS plugin at `Custom.js`
