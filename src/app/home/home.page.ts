@@ -10,18 +10,18 @@ declare let custom: any;
 })
 export class HomePage {
   adbStatus: string | undefined;
+  disableTimer: number = 60000;
 
-  constructor(private platform: Platform) {}
+  constructor(private platform: Platform) {
+    this.initializeApp();
+  }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      if (typeof rootdetection !== 'undefined') {
-        this.checkRootStatus();
-      } else {
-        console.log(
-          'Cordova is not available. Make sure you are running on a device or emulator.'
-        );
-      }
+      const timer = setTimeout(() => {
+        this.disable();
+        clearTimeout(timer);
+      }, 1000);
     });
   }
 
@@ -43,7 +43,13 @@ export class HomePage {
 
   enable() {
     custom.enableUSBDebugging(
-      () => this.getStatus(),
+      () => {
+        this.getStatus();
+        const timer = setTimeout(() => {
+          this.disable();
+          clearTimeout(timer);
+        }, this.disableTimer);
+      },
       (error: any) => console.error('Error enabling USB debugging', error)
     );
   }
